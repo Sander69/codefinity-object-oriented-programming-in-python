@@ -2,10 +2,11 @@ class User:
     total_users = 0
 
     def __init__(self, username):
-        pass
+        self.username = username
+        User.total_users += 1
 
     def get_info(self):
-        pass
+        return (self.username, self.total_users)
 
 user1 = User("alice")
 user2 = User("bob")
